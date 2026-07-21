@@ -157,7 +157,9 @@ app_ui = ui.page_fluid(
 
             ui.card(
 
-                ui.card_header("Descripción del proyecto"),
+                ui.card_header("Proyecto Bootstrap - Estimación del caudal del río Malacatos"),
+
+                ui.h4("Descripción"),
 
                 ui.p(
                     """
@@ -168,25 +170,38 @@ app_ui = ui.page_fluid(
                     secciones transversales del río y los tiempos registrados durante
                     las mediciones con flotador superficial.
 
-                    La aplicación calcula el área hidráulica mediante la Regla del
-                    Trapecio, determina la velocidad media del flujo y obtiene el
-                    caudal del río. Posteriormente, aplica miles de simulaciones
-                    Bootstrap para cuantificar la variabilidad de los resultados y
-                    calcular indicadores estadísticos como la media Bootstrap, el
-                    sesgo, el error estándar, el intervalo de confianza del 95 % y
-                    la prueba de normalidad de Shapiro-Wilk.
-
-                    Además, incorpora herramientas para la visualización gráfica de
-                    los resultados, la exportación de datos en formato CSV y la
-                    generación automática de reportes técnicos en formato PDF,
-                    facilitando el análisis e interpretación de la incertidumbre
-                    en estudios hidrológicos.
+                    La aplicación calcula automáticamente el área hidráulica mediante la 
+                    Regla del Trapecio, determina la velocidad superficial y la velocidad 
+                    media del flujo, obteniendo finalmemnte el caudal del río. Posteriormente, 
+                    ejecuta miles de simulaciones Bootstrap para analizar la variabilidad
+                    de las estimaciones y cunatificar la incertidumbre del caudal obtenido.
                     """
                 ),
 
-                ui.br(),
+                ui.hr(),
 
-                ui.h5("Objetivo General"),
+                ui.h4("metodología"),
+
+                ui.p(
+                    """
+                    La metodología implementada integra procedimientos hidráulicos,
+                    estadísticos y computacionales. Inicialmente se calcula el área de las
+                    secciones transversales mediante integración numérica utilizando la
+                    Regla del Trapecio. Con el tiempo promedio medido en campo se estima
+                    la velocidad superficial y posteriormente la velocidad media mediante
+                    un coeficiente de corrección.
+
+                    Finalmente se aplica el método Bootstrap con remuestreo de los tiempos
+                    observados para generar miles de estimaciones del caudal. A partir de
+                    dichas simulaciones se calculan la media Bootstrap, el sesgo, el error
+                    estándar, el intervalo de confianza del 95 %, la prueba de normalidad
+                    de Shapiro-Wilk y diferentes representaciones gráficas de la distribución.
+                    """
+                ),
+
+                ui.hr(),
+
+                ui.h4("Objetivo General"),
 
                 ui.p(
                     """
@@ -194,11 +209,53 @@ app_ui = ui.page_fluid(
                     calcular el caudal del río Malacatos a partir de mediciones
                     hidráulicas de campo y estimar la incertidumbre asociada mediante
                     el método Bootstrap, integrando herramientas de análisis
-                    estadístico, visualización gráfica y generación automática de
-                    reportes técnicos para facilitar la interpretación y presentación
-                    de los resultados obtenidos.
+                    estadístico, visualización gráfica, exportación de resultados y
+                    generación automática de reportes técnicos, facilitando el 
+                    análisis e interpretación de la información obtenida.
                     """
+                ),
+
+                ui.hr(),
+
+                ui.h4("Funciones principales"),
+
+                ui.tags.ul(
+
+                    ui.tags.li(
+                        "Cálculo del área hidráulica mediante la Regla del Trapecio."
+                    ),
+   
+                    ui.tags.li(
+                        "Estimación de la velocidad superficial y velocidad media."
+                    ),
+
+                    ui.tags.li(
+                        "Cálculo del caudal del río."
+                    ),
+
+                    ui.tags.li(
+                        "Simulación Bootstrap con un número configurable de remuestreos."
+                    ),
+
+                    ui.tags.li(
+                        "Cálculo de media, sesgo, error estándar e intervalo de confianza."
+                    ),
+
+                    ui.tags.li(
+                        "Prueba de normalidad de Shapiro-Wilk."
+                    ),
+
+                    ui.tags.li(
+                        "Visualización mediante histogramas y gráficos Q-Q."
+                    ),
+
+                    ui.tags.li(
+                        "Exportación de resultados en formato CSV y generación automática de reportes PDF."
+                    )
+
                 )
+
+            )
 
             )
 
@@ -382,8 +439,6 @@ Proyecto desarrollado para estimar la incertidumbre del caudal del río Malacato
         )
 
     )
-
-)
 
 
 # =====================================================
