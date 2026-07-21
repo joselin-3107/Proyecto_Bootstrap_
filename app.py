@@ -180,7 +180,7 @@ app_ui = ui.page_fluid(
 
                 ui.hr(),
 
-                ui.h4("metodología"),
+                ui.h4("Metodología"),
 
                 ui.p(
                     """
