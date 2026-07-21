@@ -161,20 +161,42 @@ app_ui = ui.page_fluid(
 
                 ui.p(
                     """
-                    Esta aplicación estima el caudal del río Malacatos
-                    mediante la Regla del Trapecio y evalúa la incertidumbre
-                    utilizando el método Bootstrap.
+                    El presente proyecto tiene como finalidad estimar el caudal del río
+                    Malacatos mediante técnicas de integración numérica y evaluar la
+                    incertidumbre asociada a dicha estimación utilizando el método
+                    Bootstrap. Para ello, se emplean las profundidades medidas en dos
+                    secciones transversales del río y los tiempos registrados durante
+                    las mediciones con flotador superficial.
+
+                    La aplicación calcula el área hidráulica mediante la Regla del
+                    Trapecio, determina la velocidad media del flujo y obtiene el
+                    caudal del río. Posteriormente, aplica miles de simulaciones
+                    Bootstrap para cuantificar la variabilidad de los resultados y
+                    calcular indicadores estadísticos como la media Bootstrap, el
+                    sesgo, el error estándar, el intervalo de confianza del 95 % y
+                    la prueba de normalidad de Shapiro-Wilk.
+
+                    Además, incorpora herramientas para la visualización gráfica de
+                    los resultados, la exportación de datos en formato CSV y la
+                    generación automática de reportes técnicos en formato PDF,
+                    facilitando el análisis e interpretación de la incertidumbre
+                    en estudios hidrológicos.
                     """
                 ),
 
                 ui.br(),
 
-                ui.h5("Objetivo"),
+                ui.h5("Objetivo General"),
 
                 ui.p(
                     """
-                    Estimar el caudal y cuantificar su incertidumbre
-                    mediante técnicas estadísticas.
+                    Desarrollar una aplicación interactiva en Python que permita
+                    calcular el caudal del río Malacatos a partir de mediciones
+                    hidráulicas de campo y estimar la incertidumbre asociada mediante
+                    el método Bootstrap, integrando herramientas de análisis
+                    estadístico, visualización gráfica y generación automática de
+                    reportes técnicos para facilitar la interpretación y presentación
+                    de los resultados obtenidos.
                     """
                 )
 
