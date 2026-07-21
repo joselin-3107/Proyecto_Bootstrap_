@@ -224,8 +224,18 @@ app_ui = ui.page_fluid(
                     "t3",
                     "Tiempo 3 (s):",
                     value=tiempos[2]
-                )
+                ),
+                ui.input_numeric(
+                    "t4",
+                    "Tiempo 4 (s):",
+                    value=tiempos[3]
+                ),
 
+                ui.input_numeric(
+                    "t5",
+                    "Tiempo 5 (s):",
+                    value=tiempos[4]
+                )
             ),
 
             ui.hr(),
@@ -371,7 +381,11 @@ def server(input, output, session):
     
             input.t2(),
     
-            input.t3()
+            input.t3(),
+
+            input.t4(),
+
+            input.t5()
     
         ]
     
