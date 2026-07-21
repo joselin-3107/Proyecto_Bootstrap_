@@ -28,7 +28,7 @@ from reportlab.lib.enums import TA_CENTER
 
 from reportlab.pdfbase.pdfmetrics import stringWidth
 
-from datetime import datetime
+from datetime import datetime, timedelta
 
 import os
 
@@ -148,7 +148,9 @@ def generar_reporte_pdf(
         )
     )
 
-    fecha = datetime.now().strftime("%d/%m/%Y %H:%M")
+    fecha = (
+        datetime.now() - timedelta(hours=5)
+    ).strftime("%d/%m/%Y %H:%M")
 
     elementos.append(
         Paragraph(
@@ -208,7 +210,7 @@ def generar_reporte_pdf(
 
     elementos.append(Spacer(1,0.6*cm))
 
-        # =====================================================
+    # =====================================================
     # RESULTADOS BOOTSTRAP
     # =====================================================
 
