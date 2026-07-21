@@ -224,10 +224,6 @@ app_ui = ui.page_fluid(
                     ui.tags.li(
                         "Cálculo del área hidráulica mediante la Regla del Trapecio."
                     ),
-   
-                    ui.tags.li(
-                        "Estimación de la velocidad superficial y velocidad media."
-                    ),
 
                     ui.tags.li(
                         "Cálculo del caudal del río."
@@ -251,15 +247,14 @@ app_ui = ui.page_fluid(
 
                     ui.tags.li(
                         "Exportación de resultados en formato CSV y generación automática de reportes PDF."
+
                     )
 
-                )
-
             )
 
-            )
+        )    
 
-        ),
+    ),
 
         # =====================================
         # DATOS HIDRÁULICOS
@@ -439,6 +434,8 @@ Proyecto desarrollado para estimar la incertidumbre del caudal del río Malacato
         )
 
     )
+
+)
 
 
 # =====================================================
