@@ -113,29 +113,28 @@ app_ui = ui.page_fluid(
 
 
     ui.h1(
-        "Estimación de la Incertidumbre del Caudal mediante Bootstrap",
+        "Estimación de la Incertidumbre del Caudal del Río Malacatos",
         style="text-algin:center;"
     ),
 
     ui.h4(
-        "Río Malacatos - Universidad Nacional de Loja",
+        "Universidad Nacional de Loja",
+        "Carrera de Ingeniería ambiental",
         style="text-align:center; color:gray;"
     ),
 
     ui.hr(),
 
-    ui.h5(
-    "Carrera de Ingeniería Ambiental"
-    ),
-
     ui.h6(
-    "Proyecto Bootstrap - Estimación de la incertidumbre del caudal"
+    "Aplicación del método Bootstrap para el Análisis de la Incertidumbre",
     ),
 
     ui.p(
         """
-        Aplicación desarrollada para estimar el caudal del río
-        mediante integración numérica y simulación Bootstrap.
+        Aplicación interactiva desarrollada en Python con Shiny para la estimación 
+        del caudal del río Malacatos mediante integración numérica y simulación
+        Bootstrap, incorporando herramientas de análisis estadístico,
+        visualización gráfica y generación automática de reportes técnicos.
         """
     ),
 
