@@ -30,6 +30,8 @@ from reportlab.pdfbase.pdfmetrics import stringWidth
 
 from datetime import datetime
 
+from zoneinfo import ZoneInfo
+
 import os
 
 
@@ -148,7 +150,9 @@ def generar_reporte_pdf(
         )
     )
 
-    fecha = datetime.now().strftime("%d/%m/%Y %H:%M")
+    fecha = datetime.now(
+        Zoneinfo("America/Guayaquil")
+    ).strftime("%d/%m/%Y %H:%M")
 
     elementos.append(
         Paragraph(
