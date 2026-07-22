@@ -114,7 +114,7 @@ app_ui = ui.page_fluid(
 
     ui.h1(
         "Estimación de la Incertidumbre del Caudal del Río Malacatos",
-        style="text-algin:center;"
+        style="text-algin:center; color:#2E6DA4"
     ),
 
     ui.h4(
