@@ -137,6 +137,11 @@ app_ui = ui.page_fluid(
         """
     ),
 
+    ui.p(
+        "Versión 1.0 • Python • Shiny • SciPy • Matplotlib • ReportLab",
+        style="text-align:center; color:gray;"
+    ),
+
     ui.hr(),
 
     # -----------------------------------------
