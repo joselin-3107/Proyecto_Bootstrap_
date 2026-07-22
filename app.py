@@ -118,15 +118,14 @@ app_ui = ui.page_fluid(
     ),
 
     ui.h4(
-        "Universidad Nacional de Loja",
-        "Carrera de Ingeniería ambiental",
+        "Universidad Nacional de Loja - Carrera de Ingeniería ambiental",
         style="text-align:center; color:gray;"
     ),
 
     ui.hr(),
 
     ui.h6(
-    "Aplicación del método Bootstrap para el Análisis de la Incertidumbre",
+    "Proyecto Bootstrap - Estimación de la incertidumbre del caudal"
     ),
 
     ui.p(
